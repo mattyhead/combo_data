@@ -5,21 +5,21 @@ and lookups for resulting form responses.
 
  */
 class Combo {
-    public $prefixes = array(
+    public static $prefixes = array(
         '1' => '',
         '2' => 'Mr.',
         '3' => 'Mrs.',
         '4' => 'Ms.',
         '5' => 'Dr.',
     );
-    public $suffixes = array(
+    public static $suffixes = array(
         '1' => '',
         '2' => 'Jr.',
         '3' => 'Sr.',
         '4' => 'II',
         '5' => 'III',
     );
-    public $states = array(
+    public static $states = array(
         'AL' => 'Alabama',
         'AK' => 'Alaska',
         'AS' => 'American',
@@ -81,35 +81,35 @@ class Combo {
         'WY' => 'Wyoming',
     );
 
-    public function setComboData($arr) {
+    public static function setComboData($arr) {
         foreach ($arr as $idx => $value) {
             $return[] = (object) array('idx' => $idx, 'value' => $value);
         }
         return $return;
     }
 
-    public function getPrefix($idx) {
-        return $this->prefixes[$idx];
+    public static function getPrefix($idx) {
+        return self::$prefixes[$idx];
     }
 
-    public function getPrefixes() {
+    public static function getPrefixes() {
 
-        return $this->setComboData($this->prefixes);
+        return self::$setComboData(self::$prefixes);
     }
 
-    public function getSuffix($idx) {
-        return $this->suffixes[$idx];
+    public static function getSuffix($idx) {
+        return self::$suffixes[$idx];
     }
 
-    public function getSuffixes() {
-        return $this->setComboData($this->suffixes);
+    public static function getSuffixes() {
+        return self::$setComboData(self::$suffixes);
     }
 
-    public function getUSState($idx) {
-        return $this->states[$idx];
+    public static function getUSState($idx) {
+        return self::$states[$idx];
     }
 
-    public function getUSStates() {
-        return $this->setComboData($arr);
+    public static function getUSStates() {
+        return self::$setComboData(self::$states);
     }
 }
