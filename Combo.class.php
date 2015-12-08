@@ -94,7 +94,7 @@ class Combo {
 
     public static function getPrefixes() {
 
-        return self::$setComboData(self::$prefixes);
+        return self::setComboData(self::$prefixes);
     }
 
     public static function getSuffix($idx) {
@@ -102,7 +102,7 @@ class Combo {
     }
 
     public static function getSuffixes() {
-        return self::$setComboData(self::$suffixes);
+        return self::setComboData(self::$suffixes);
     }
 
     public static function getUSState($idx) {
@@ -110,6 +110,6 @@ class Combo {
     }
 
     public static function getUSStates() {
-        return self::$setComboData(self::$states);
+        return self::setComboData(self::$states);
     }
 }
