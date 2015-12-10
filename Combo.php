@@ -6,22 +6,27 @@ and lookups for resulting form responses.
  */
 class Combo {
     public static $genders = array(
-        'Dr.' => '',
-        'Mr.' => 'M',
-        'Ms.' => 'F',
-        'Mrs.' => 'F',
+        'Mr' => 'M',
+        'Ms' => 'F',
+        'Miss' => 'F',
+        'Mrs' => 'F',
+    );
+    public static $marital = array(
+        'Miss' => 'S',
+        'Mrs' => 'M',
     );
     public static $prefixes = array(
         '1' => '',
-        '2' => 'Mr.',
+        '2' => 'Mr',
         '3' => 'Mrs.',
-        '4' => 'Ms.',
-        '5' => 'Dr.',
+        '4' => 'Ms',
+        '5' => 'Miss',
+        '6' => 'Dr',
     );
     public static $suffixes = array(
         '1' => '',
-        '2' => 'Jr.',
-        '3' => 'Sr.',
+        '2' => 'Jr',
+        '3' => 'Sr',
         '4' => 'II',
         '5' => 'III',
     );
