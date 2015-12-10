@@ -5,6 +5,12 @@ and lookups for resulting form responses.
 
  */
 class Combo {
+    public static $genders = array(
+        'Dr.' => 'I',
+        'Mr.' => 'M',
+        'Ms.' => 'F',
+        'Mrs.' => 'F',
+    );
     public static $prefixes = array(
         '1' => '',
         '2' => 'Mr.',
@@ -86,6 +92,10 @@ class Combo {
             $return[] = (object) array('idx' => $idx, 'value' => $value);
         }
         return $return;
+    }
+
+    public static function getGender($idx) {
+        return self::$genders[$idx];
     }
 
     public static function getPrefix($idx) {
