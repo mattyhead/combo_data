@@ -11,7 +11,7 @@ class Combo {
         'Miss' => 'F',
         'Mrs' => 'F',
     );
-    public static $marital = array(
+    public static $maritals = array(
         'Miss' => 'S',
         'Mrs' => 'M',
     );
@@ -101,6 +101,10 @@ class Combo {
 
     public static function getGender($idx) {
         return self::$genders[$idx];
+    }
+
+    public static function getMarital($idx) {
+        return self::$maritals[$idx];
     }
 
     public static function getPrefix($idx) {
