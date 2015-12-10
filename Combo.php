@@ -6,7 +6,7 @@ and lookups for resulting form responses.
  */
 class Combo {
     public static $genders = array(
-        'Dr.' => 'I',
+        'Dr.' => '',
         'Mr.' => 'M',
         'Ms.' => 'F',
         'Mrs.' => 'F',
