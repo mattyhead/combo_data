@@ -18,7 +18,7 @@ class Combo {
     public static $prefixes = array(
         '1' => '',
         '2' => 'Mr',
-        '3' => 'Mrs.',
+        '3' => 'Mrs',
         '4' => 'Ms',
         '5' => 'Miss',
         '6' => 'Dr',
