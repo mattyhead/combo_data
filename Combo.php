@@ -11,10 +11,12 @@ class Combo {
         'Miss' => 'F',
         'Mrs' => 'F',
     );
+
     public static $maritals = array(
         'Miss' => 'S',
         'Mrs' => 'M',
     );
+
     public static $prefixes = array(
         '1' => '',
         '2' => 'Mr',
@@ -23,6 +25,7 @@ class Combo {
         '5' => 'Miss',
         '6' => 'Dr',
     );
+
     public static $suffixes = array(
         '1' => '',
         '2' => 'Jr',
@@ -30,6 +33,7 @@ class Combo {
         '4' => 'II',
         '5' => 'III',
     );
+
     public static $states = array(
         'AL' => 'Alabama',
         'AK' => 'Alaska',
