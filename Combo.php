@@ -103,6 +103,14 @@ class Combo {
         return $return;
     }
 
+    public static function gets($propName) {
+        return self::setComboData(self::$$propName);
+    }
+
+    public static function get($idx, $propName) {
+        return self::$$propName[$idx];
+    }
+
     public static function getGender($idx) {
         return self::$genders[$idx];
     }
