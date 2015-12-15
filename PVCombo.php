@@ -4,20 +4,23 @@ Class Combo provides arrays shaped for Joomla1.5 select/options
 and lookups for resulting form responses.
 
  */
-class Combo {
-    public static $genders = array(
-        'Mr' => 'M',
-        'Ms' => 'F',
-        'Miss' => 'F',
-        'Mrs' => 'F',
+class PVCombo {
+    public static $linkType = array(
+        '1' => 'email',
+        '2' => 'phone',
+        '3' => 'cell',
+        '4' => 'fax',
+        '5' => 'pager',
     );
 
-    public static $maritals = array(
-        'Miss' => 'S',
-        'Mrs' => 'M',
+    public static $phoneType = array(
+        '1' => 'phone',
+        '2' => 'cell',
+        '3' => 'fax',
+        '4' => 'pager',
     );
 
-    public static $prefixes = array(
+    public static $prefix = array(
         '1' => '',
         '2' => 'Mr',
         '3' => 'Mrs',
@@ -26,7 +29,19 @@ class Combo {
         '6' => 'Dr',
     );
 
-    public static $states = array(
+    public static $prefixGender = array(
+        'Mr' => 'M',
+        'Ms' => 'F',
+        'Miss' => 'F',
+        'Mrs' => 'F',
+    );
+
+    public static $prefixMarital = array(
+        'Miss' => 'S',
+        'Mrs' => 'M',
+    );
+
+    public static $state = array(
         'AL' => 'Alabama',
         'AK' => 'Alaska',
         'AS' => 'American',
@@ -88,7 +103,7 @@ class Combo {
         'WY' => 'Wyoming',
     );
 
-    public static $suffixes = array(
+    public static $suffix = array(
         '1' => '',
         '2' => 'Jr',
         '3' => 'Sr',
