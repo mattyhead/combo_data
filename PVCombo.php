@@ -9,9 +9,8 @@ class PVCombo {
      * LinkTypes indexed by an arbitrary index
      * @var array
      */
-    public static $linkType = array(
-        '1' => 'email',
-        '2' => 'phone',
+    public static $phoneTypeLong = array(
+        '2' => 'home',
         '3' => 'cell',
         '4' => 'fax',
         '5' => 'pager',
@@ -21,11 +20,9 @@ class PVCombo {
      * Phone functions by an arbitrary index
      * @var array
      */
-    public static $phoneType = array(
-        '1' => 'phone',
+    public static $phoneTypeShort = array(
+        '1' => 'home',
         '2' => 'cell',
-        '3' => 'fax',
-        '4' => 'pager',
     );
 
     /**
