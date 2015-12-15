@@ -140,17 +140,33 @@ class PVCombo {
         '6' => 'Esq',
     );
 
-    public static function setComboData($arr) {
-        foreach ($arr as $idx => $value) {
+    /**
+     * Forms property (an indexed array) into something joomla.html.select.genericlist can use
+     * @param   array $arr Static property array
+     * @return  array usable by joomla.html.select.genericlist
+     */
+    public static function setComboData($propArray) {
+        foreach ($propArray as $idx => $value) {
             $return[] = (object) array('idx' => $idx, 'value' => $value);
         }
         return $return;
     }
 
+    /**
+     * Agnostic call to get combo-friendly data
+     * @param  string  $propName  name of property
+     * @return method             returns conbo-friendly data
+     */
     public static function gets($propName) {
         return self::setComboData(self::$$propName);
     }
 
+    /**
+     * Agnostic call to get a specific property element
+     * @param  string $idx      index to call
+     * @param  string $propName propery name
+     * @return string           desired element of called property
+     */
     public static function get($idx, $propName) {
         return self::$$propName[$idx];
     }
