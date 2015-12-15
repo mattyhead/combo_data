@@ -5,6 +5,10 @@ and lookups for resulting form responses.
 
  */
 class PVCombo {
+    /**
+     * LinkTypes indexed by an arbitrary index
+     * @var array
+     */
     public static $linkType = array(
         '1' => 'email',
         '2' => 'phone',
@@ -13,6 +17,10 @@ class PVCombo {
         '5' => 'pager',
     );
 
+    /**
+     * Phone functions by an arbitrary index
+     * @var array
+     */
     public static $phoneType = array(
         '1' => 'phone',
         '2' => 'cell',
@@ -20,6 +28,10 @@ class PVCombo {
         '4' => 'pager',
     );
 
+    /**
+     * Prefixes by an arbitrary index (with null element)
+     * @var array
+     */
     public static $prefix = array(
         '1' => '',
         '2' => 'Mr',
@@ -29,6 +41,10 @@ class PVCombo {
         '6' => 'Dr',
     );
 
+    /**
+     * Genders (dupes OK) indexed by conclusive prefix
+     * @var array
+     */
     public static $prefixGender = array(
         'Mr' => 'M',
         'Ms' => 'F',
@@ -36,11 +52,19 @@ class PVCombo {
         'Mrs' => 'F',
     );
 
+    /**
+     * Marital statuses indexed by conclusive prefix
+     * @var array
+     */
     public static $prefixMarital = array(
         'Miss' => 'S',
         'Mrs' => 'M',
     );
 
+    /**
+     * States indexed by abbreviations
+     * @var array
+     */
     public static $state = array(
         'AL' => 'Alabama',
         'AK' => 'Alaska',
@@ -103,12 +127,17 @@ class PVCombo {
         'WY' => 'Wyoming',
     );
 
+    /**
+     * Suffixes by an arbitrary index
+     * @var array
+     */
     public static $suffix = array(
         '1' => '',
         '2' => 'Jr',
         '3' => 'Sr',
         '4' => 'II',
         '5' => 'III',
+        '6' => 'Esq',
     );
 
     public static function setComboData($arr) {
@@ -124,38 +153,5 @@ class PVCombo {
 
     public static function get($idx, $propName) {
         return self::$$propName[$idx];
-    }
-
-    public static function getGender($idx) {
-        return self::$genders[$idx];
-    }
-
-    public static function getMarital($idx) {
-        return self::$maritals[$idx];
-    }
-
-    public static function getPrefix($idx) {
-        return self::$prefixes[$idx];
-    }
-
-    public static function getPrefixes() {
-
-        return self::setComboData(self::$prefixes);
-    }
-
-    public static function getSuffix($idx) {
-        return self::$suffixes[$idx];
-    }
-
-    public static function getSuffixes() {
-        return self::setComboData(self::$suffixes);
-    }
-
-    public static function getUSState($idx) {
-        return self::$states[$idx];
-    }
-
-    public static function getUSStates() {
-        return self::setComboData(self::$states);
     }
 }
