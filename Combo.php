@@ -26,14 +26,6 @@ class Combo {
         '6' => 'Dr',
     );
 
-    public static $suffixes = array(
-        '1' => '',
-        '2' => 'Jr',
-        '3' => 'Sr',
-        '4' => 'II',
-        '5' => 'III',
-    );
-
     public static $states = array(
         'AL' => 'Alabama',
         'AK' => 'Alaska',
@@ -94,6 +86,14 @@ class Combo {
         'WV' => 'West Virginia',
         'WI' => 'Wisconsin',
         'WY' => 'Wyoming',
+    );
+
+    public static $suffixes = array(
+        '1' => '',
+        '2' => 'Jr',
+        '3' => 'Sr',
+        '4' => 'II',
+        '5' => 'III',
     );
 
     public static function setComboData($arr) {
