@@ -160,11 +160,11 @@ class PVCombo {
 
     /**
      * Agnostic call to get a specific property element
-     * @param  string $idx      index to call
      * @param  string $propName propery name
+     * @param  string $idx      index to call
      * @return string           desired element of called property
      */
-    public static function get($idx, $propName) {
+    public static function get($propName, $idx) {
         return self::$$propName[$idx];
     }
 }
