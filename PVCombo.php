@@ -4,7 +4,8 @@ Class Combo provides arrays shaped for Joomla1.5 select/options
 and lookups for resulting form responses.
 
  */
-class PVCombo {
+class PVCombo
+{
     /**
      * LinkTypes indexed by an arbitrary index
      * @var array
@@ -142,7 +143,8 @@ class PVCombo {
      * @param   array $arr Static property array
      * @return  array usable by joomla.html.select.genericlist
      */
-    public static function setComboData($propArray) {
+    public static function setComboData($propArray)
+    {
         foreach ($propArray as $idx => $value) {
             $return[] = (object) array('idx' => $idx, 'value' => $value);
         }
@@ -154,7 +156,8 @@ class PVCombo {
      * @param  string  $propName  name of property
      * @return method             returns conbo-friendly data
      */
-    public static function gets($propName) {
+    public static function gets($propName)
+    {
         return self::setComboData(self::$$propName);
     }
 
@@ -164,8 +167,11 @@ class PVCombo {
      * @param  string $idx      index to call
      * @return string           desired element of called property
      */
-    public static function get($propName) {
-
+    public static function get($propName, $idx = null)
+    {
+        if ($idx) {
+            return self::$$propName[$idx];
+        }
         return self::$$propName;
     }
 }
