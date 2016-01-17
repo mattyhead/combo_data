@@ -164,7 +164,8 @@ class PVCombo {
      * @param  string $idx      index to call
      * @return string           desired element of called property
      */
-    public static function get($propName, $idx) {
-        return self::$$propName[$idx];
+    public static function get($propName) {
+
+        return self::$$propName;
     }
 }
