@@ -170,7 +170,6 @@ class PVCombo
     public static function get($propName, $idx = null)
     {
         if ($idx) {
-            $temp = self::$$propName;
             return isset(self::${$propName}) && isset(self::${$propName}[$idx]) ? self::${$propName}[$idx] : null;
         }
         return self::$$propName;
