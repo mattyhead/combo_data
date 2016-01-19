@@ -171,7 +171,7 @@ class PVCombo
     {
         if ($idx) {
             $temp = self::$$propName;
-            return $temp[$idx];
+            return isset(self::${$propName}) && isset(self::${$propName}[$idx]) ? self::${$propName}[$idx] : null;
         }
         return self::$$propName;
     }
