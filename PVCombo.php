@@ -1,4 +1,5 @@
 <?php
+
 /*
 Class Combo provides arrays shaped for Joomla1.5 select/options
 and lookups for resulting form responses.
@@ -7,7 +8,8 @@ and lookups for resulting form responses.
 class PVCombo
 {
     /**
-     * LinkTypes indexed by an arbitrary index
+     * LinkTypes indexed by an arbitrary index.
+     *
      * @var array
      */
     public static $phoneTypeLong = array(
@@ -18,7 +20,8 @@ class PVCombo
     );
 
     /**
-     * Phone functions by an arbitrary index
+     * Phone functions by an arbitrary index.
+     *
      * @var array
      */
     public static $phoneTypeShort = array(
@@ -27,7 +30,8 @@ class PVCombo
     );
 
     /**
-     * Prefixes by an arbitrary index (with null element)
+     * Prefixes by an arbitrary index (with null element).
+     *
      * @var array
      */
     public static $prefix = array(
@@ -40,7 +44,8 @@ class PVCombo
     );
 
     /**
-     * Genders (dupes OK) indexed by conclusive prefix
+     * Genders (dupes OK) indexed by conclusive prefix.
+     *
      * @var array
      */
     public static $prefixGender = array(
@@ -51,7 +56,8 @@ class PVCombo
     );
 
     /**
-     * Marital statuses indexed by conclusive prefix
+     * Marital statuses indexed by conclusive prefix.
+     *
      * @var array
      */
     public static $prefixMarital = array(
@@ -60,7 +66,8 @@ class PVCombo
     );
 
     /**
-     * States indexed by abbreviations
+     * States indexed by abbreviations.
+     *
      * @var array
      */
     public static $state = array(
@@ -126,7 +133,8 @@ class PVCombo
     );
 
     /**
-     * Suffixes by an arbitrary index
+     * Suffixes by an arbitrary index.
+     *
      * @var array
      */
     public static $suffix = array(
@@ -139,22 +147,27 @@ class PVCombo
     );
 
     /**
-     * Forms property (an indexed array) into something joomla.html.select.genericlist can use
-     * @param   array $arr Static property array
-     * @return  array usable by joomla.html.select.genericlist
+     * Forms property (an indexed array) into something joomla.html.select.genericlist can use.
+     *
+     * @param array $arr Static property array
+     *
+     * @return array usable by joomla.html.select.genericlist
      */
     public static function setComboData($propArray)
     {
         foreach ($propArray as $idx => $value) {
             $return[] = (object) array('idx' => $idx, 'value' => $value);
         }
+
         return $return;
     }
 
     /**
-     * Agnostic call to get combo-friendly data
-     * @param  string  $propName  name of property
-     * @return method             returns conbo-friendly data
+     * Agnostic call to get combo-friendly data.
+     *
+     * @param string $propName name of property
+     *
+     * @return method returns conbo-friendly data
      */
     public static function gets($propName)
     {
@@ -162,16 +175,19 @@ class PVCombo
     }
 
     /**
-     * Agnostic call to get a specific property element
-     * @param  string $propName propery name
-     * @param  string $idx      index to call
-     * @return string           desired element of called property
+     * Agnostic call to get a specific property element.
+     *
+     * @param string $propName propery name
+     * @param string $idx      index to call
+     *
+     * @return string desired element of called property
      */
     public static function get($propName, $idx = null)
     {
         if ($idx) {
             return isset(self::${$propName}) && isset(self::${$propName}[$idx]) ? self::${$propName}[$idx] : null;
         }
+
         return self::$$propName;
     }
 }
