@@ -190,4 +190,13 @@ class PVCombo
 
         return self::$$propName;
     }
+
+    public static function keySearch($propName, $value = null)
+    {
+        if ($value) {
+            return isset(self::${$propName}) ? array_search($value, self::${$propName}) : null;
+        }
+
+        return null;
+    }
 }
