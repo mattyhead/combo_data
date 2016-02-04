@@ -191,6 +191,13 @@ class PVCombo
         return self::$$propName;
     }
 
+    /**
+     * Lookup key from value, again agnostically
+     *
+     * @param  string $propName property name
+     * @param  string $value    value on the property
+     * @return string           desired element key from specified property
+     */
     public static function keySearch($propName, $value = null)
     {
         if ($value) {
