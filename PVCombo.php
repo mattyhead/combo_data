@@ -226,7 +226,7 @@ class PVCombo
         foreach ($object as $item) {
             $tmp[$item->$key] = (string) $item->$value;
         }
-
+        sort($tmp);
         return self::setComboData($tmp);
     }
 }
