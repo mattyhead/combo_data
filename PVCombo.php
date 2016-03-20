@@ -221,14 +221,14 @@ class PVCombo
     {
         $tmp1 = $tmp2 = array();
         if ($first) {
-            $tmp2[]=$first;
+            $tmp2[] = $first;
         }
         foreach ($object as $item) {
             $tmp1[$item->$key] = (string) $item->$value;
         }
         $sort($tmp1);
-        for ($tmp1 as $k=>$v) {
-            $tpm2[$k]=$v;
+        foreach ($tmp1 as $k => $v) {
+            $tpm2[$k] = $v;
         }
         return self::setComboData($tmp2);
     }
