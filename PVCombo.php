@@ -217,19 +217,16 @@ class PVCombo
      *
      * @return mixed   combo-ready array
      */
-    public static function getsFromObject($object, $key, $value, $first = false, $sort = 'sort')
+    public static function getsFromObject($object, $key, $value, $first = false)
     {
-        $tmp1 = $tmp2 = array();
+        $tmp = array();
         if ($first) {
-            $tmp2[] = $first;
+            $tmp[] = $first;
         }
         foreach ($object as $item) {
-            $tmp1[$item->$key] = (string) $item->$value;
+            $tmp[$item->$key] = (string) $item->$value;
         }
-        $sort($tmp1);
-        foreach ($tmp1 as $k => $v) {
-            $tmp2[$k] = $v;
-        }
-        return self::setComboData($tmp2);
+
+        return self::setComboData($tmp);
     }
 }
