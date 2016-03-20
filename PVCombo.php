@@ -219,14 +219,17 @@ class PVCombo
      */
     public static function getsFromObject($object, $key, $value, $first = false, $sort = 'ksort')
     {
-        $tmp = array();
+        $tmp1 = $tmp2 = array();
         if ($first) {
-            $tmp[] = $first;
+            $tmp2[]=$first;
         }
         foreach ($object as $item) {
-            $tmp[$item->$key] = (string) $item->$value;
+            $tmp1[$item->$key] = (string) $item->$value;
         }
-        $sort($tmp);
-        return self::setComboData($tmp);
+        $sort($tmp1);
+        for ($tmp1 as $k=>$v) {
+            $tpm2[$k]=$v;
+        }
+        return self::setComboData($tmp2);
     }
 }
