@@ -206,4 +206,27 @@ class PVCombo
 
         return null;
     }
+
+    /**
+     * Take an object and indecis and return a combo-ready array
+     *
+     * @param $object  data source
+     * @param $key     key index
+     * @param $value   value index
+     * @param $first   optional first element
+     *
+     * @return mixed   combo-ready array
+     */
+    public static function getsFromObject($object, $key, $value, $first = false)
+    {
+        $tmp = array();
+        if ($first) {
+            array_push($tmp, $first);
+        }
+        foreach ($object as $item) {
+            array_push($tmp, array($item->$key => $item->$value));
+        }
+
+        return self::setComboData($tmp);
+    }
 }
