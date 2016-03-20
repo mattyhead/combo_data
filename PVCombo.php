@@ -223,7 +223,9 @@ class PVCombo
         if ($first) {
             $tmp[] = $first;
         }
+        d($first);
         foreach ($object as $item) {
+            d($item, array($item->$key => $item->$value));
             $tmp[] = array($item->$key => $item->$value);
         }
 
