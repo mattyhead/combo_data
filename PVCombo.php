@@ -225,8 +225,8 @@ class PVCombo
         }
         d($first);
         foreach ($object as $item) {
-            d($item, array($item->$key => $item->$value));
-            $tmp[] = array($item->$key => $item->$value);
+            d($item, array((string) $item->$key => (string) $item->$value));
+            $tmp[] = array((string) $item->$key => (string) $item->$value);
         }
 
         return self::setComboData($tmp);
