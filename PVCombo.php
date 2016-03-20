@@ -221,10 +221,10 @@ class PVCombo
     {
         $tmp = array();
         if ($first) {
-            array_push($tmp, $first);
+            $tmp[] = $first;
         }
         foreach ($object as $item) {
-            array_push($tmp, array($item->$key => $item->$value));
+            $tmp[] = array($item->$key => $item->$value);
         }
 
         return self::setComboData($tmp);
