@@ -221,12 +221,12 @@ class PVCombo
     {
         $tmp = array();
         if ($first) {
-            array_push($tmp, $first);
+            $tmp[] = $first[''];
         }
         d($first);
         foreach ($object as $item) {
             d($item, array((string) $item->$key => (string) $item->$value));
-            array_push($tmp, array((string) $item->$key => (string) $item->$value));
+            $tmp[$item->$key] = (string) $item->$value;
         }
         d($tmp, self::${'prefix'});
         return self::setComboData($tmp);
