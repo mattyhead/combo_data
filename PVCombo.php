@@ -217,7 +217,7 @@ class PVCombo
      *
      * @return mixed   combo-ready array
      */
-    public static function getsFromObject($object, $key, $value, $first = false, $sort = 'ksort')
+    public static function getsFromObject($object, $key, $value, $first = false, $sort = 'sort')
     {
         $tmp1 = $tmp2 = array();
         if ($first) {
