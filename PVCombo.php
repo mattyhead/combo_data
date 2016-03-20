@@ -228,7 +228,7 @@ class PVCombo
             d($item, array((string) $item->$key => (string) $item->$value));
             $tmp[] = array((string) $item->$key => (string) $item->$value);
         }
-
+        d($tmp, self::prefix);
         return self::setComboData($tmp);
     }
 }
