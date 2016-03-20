@@ -228,7 +228,7 @@ class PVCombo
         }
         $sort($tmp1);
         foreach ($tmp1 as $k => $v) {
-            $tpm2[$k] = $v;
+            $tmp2[$k] = $v;
         }
         return self::setComboData($tmp2);
     }
