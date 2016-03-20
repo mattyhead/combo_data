@@ -217,7 +217,7 @@ class PVCombo
      *
      * @return mixed   combo-ready array
      */
-    public static function getsFromObject($object, $key, $value, $first = false)
+    public static function getsFromObject($object, $key, $value, $first = false, $sort = 'ksort')
     {
         $tmp = array();
         if ($first) {
@@ -226,7 +226,7 @@ class PVCombo
         foreach ($object as $item) {
             $tmp[$item->$key] = (string) $item->$value;
         }
-        ksort($tmp);
+        $sort($tmp);
         return self::setComboData($tmp);
     }
 }
