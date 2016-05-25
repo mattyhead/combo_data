@@ -8,6 +8,32 @@ and lookups for resulting form responses.
 class PVCombo
 {
     /**
+     * building attributes by a meaningful index.
+     *
+     * @var array
+     */
+    public static $building = array(
+        'F' => 'Building Fully Accessible',
+        'A' => 'Alternate Entrance',
+        'B' => 'Building Substantially Accessible',
+        'R' => 'Accessible With Ramp',
+        'M' => 'Building Accessiblity Modified',
+        'N' => 'Building Not Accessible',
+    );
+
+    /**
+     * parking attributes by a meaningful index.
+     *
+     * @var array
+     */
+    public static $parking = array(
+        'N' => 'No Parking',
+        'H' => 'Handicap Parking',
+        'L' => 'Loading Zone',
+        'G' => 'General Parking',
+    );
+
+    /**
      * LinkTypes indexed by an arbitrary index.
      *
      * @var array
@@ -192,11 +218,12 @@ class PVCombo
     }
 
     /**
-     * Lookup key from value, again agnostically
+     * Lookup key from value, again agnostically.
      *
-     * @param  string $propName property name
-     * @param  string $value    value on the property
-     * @return string           desired element key from specified property
+     * @param string $propName property name
+     * @param string $value    value on the property
+     *
+     * @return string desired element key from specified property
      */
     public static function keySearch($propName, $value = null)
     {
@@ -204,18 +231,18 @@ class PVCombo
             return isset(self::${$propName}) ? array_search($value, self::${$propName}) : null;
         }
 
-        return null;
+        return;
     }
 
     /**
-     * Take an object and indecis and return a combo-ready array
+     * Take an object and indecis and return a combo-ready array.
      *
      * @param $object  data source
      * @param $key     key index
      * @param $value   value index
      * @param $first   optional first element
      *
-     * @return mixed   combo-ready array
+     * @return mixed combo-ready array
      */
     public static function getsFromObject($object, $key, $value, $first = false)
     {
