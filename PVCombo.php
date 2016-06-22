@@ -34,6 +34,17 @@ class PVCombo
     );
 
     /**
+     * Parties by an arbitrary index (with null element).
+     *
+     * @var array
+     */
+    public static $prefix = array(
+        'D' => 'Democrat',
+        'R' => 'Republican',
+        'O' => 'Other',
+    );
+
+    /**
      * LinkTypes indexed by an arbitrary index.
      *
      * @var array
