@@ -38,7 +38,7 @@ class PVCombo
      *
      * @var array
      */
-    public static $prefix = array(
+    public static $party = array(
         'D' => 'Democrat',
         'R' => 'Republican',
         'O' => 'Other',
@@ -86,10 +86,10 @@ class PVCombo
      * @var array
      */
     public static $prefixGender = array(
-        'Mr' => 'M',
-        'Ms' => 'F',
+        'Mr'   => 'M',
+        'Ms'   => 'F',
         'Miss' => 'F',
-        'Mrs' => 'F',
+        'Mrs'  => 'F',
     );
 
     /**
@@ -99,7 +99,7 @@ class PVCombo
      */
     public static $prefixMarital = array(
         'Miss' => 'S',
-        'Mrs' => 'M',
+        'Mrs'  => 'M',
     );
 
     /**
