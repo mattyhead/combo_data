@@ -77,7 +77,8 @@ class PVCombo
         '3' => 'Mrs',
         '4' => 'Ms',
         '5' => 'Miss',
-        '6' => 'Dr',
+        '6' => 'Mx',
+        '7' => 'Dr',
     );
 
     /**
@@ -90,6 +91,7 @@ class PVCombo
         'Ms'   => 'F',
         'Miss' => 'F',
         'Mrs'  => 'F',
+        'Mx'   => 'N',
     );
 
     /**
