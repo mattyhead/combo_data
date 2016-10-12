@@ -13,6 +13,7 @@ class PVCombo
      * @var array
      */
     public static $building = array(
+        '' => '',
         'F' => 'Building Fully Accessible',
         'A' => 'Alternate Entrance',
         'B' => 'Building Substantially Accessible',
@@ -27,6 +28,7 @@ class PVCombo
      * @var array
      */
     public static $parking = array(
+        '' => '',
         'N' => 'No Parking',
         'H' => 'Handicap Parking',
         'L' => 'Loading Zone',
@@ -38,7 +40,7 @@ class PVCombo
      *
      * @var array
      */
-    public static $party = array(
+    public static $parties = array(
         'D' => 'Democrat',
         'R' => 'Republican',
         'O' => 'Other',
@@ -87,11 +89,11 @@ class PVCombo
      * @var array
      */
     public static $prefixGender = array(
-        'Mr'   => 'M',
-        'Ms'   => 'F',
+        'Mr' => 'M',
+        'Ms' => 'F',
         'Miss' => 'F',
-        'Mrs'  => 'F',
-        'Mx'   => 'N',
+        'Mrs' => 'F',
+        'Mx' => 'N',       
     );
 
     /**
@@ -101,7 +103,7 @@ class PVCombo
      */
     public static $prefixMarital = array(
         'Miss' => 'S',
-        'Mrs'  => 'M',
+        'Mrs' => 'M',
     );
 
     /**
